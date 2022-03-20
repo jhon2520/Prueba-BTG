@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import Header from './Header'
 import Table from './Table'
 import Grid from './Grid'
+import ChartApp from "./Chart"
 
 export default function MyApp() {
 
@@ -47,6 +48,10 @@ export default function MyApp() {
                 deleteData={deleteData}
                 capitalInicial={capitalInicial}
                 setCapitalInicial={setCapitalInicial}
+                />
+            <hr/>
+            <ChartApp
+                fondos={fondos}
             />
             <hr/>
             <Grid/>

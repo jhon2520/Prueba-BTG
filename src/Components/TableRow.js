@@ -13,11 +13,11 @@ export default function TableRow(props) {
         props.setCapitalInicial((el)=>500000-valor)
     } 
     
-    useEffect(()=>{
+    // useEffect(()=>{
         
-        console.log(props.fondos)
+    //     console.log(props.fondos)
         
-    },[props.fondos])
+    // },[props.fondos])
     
 
     return(

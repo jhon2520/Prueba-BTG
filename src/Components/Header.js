@@ -21,7 +21,7 @@ export default function Header(props) {
         }
 
         let valorFondo = initialDB.find((i)=>i.nombre===valor).monto;
-        if(props.capitalInicial > valorFondo){
+        if(props.capitalInicial >= valorFondo){
 
             // Disiminuir capital
             props.setCapitalInicial(el=>el-valorFondo);
