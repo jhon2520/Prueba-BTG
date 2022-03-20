@@ -1,9 +1,16 @@
 .char_container{
-    background: green;
+    /* background: green; */
     width: 30%;
-    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .char{
-    background: purple;
+    /* background: purple; */
+    width: 80%;
+    height: 75%;
+    max-width: 80%;
+    max-height: 75%;
 }

@@ -38,7 +38,7 @@ export default function ChartApp(props) {
         labels:fondosUnicos,
         datasets:[{
           data:valoresSumados,
-          backgroundColor:["#FFFF00","blue","green","#ff0000"]
+          backgroundColor:["#21325E","#8A39E1","#00B4D8","#495371","#219F94"]
         }]
       };
 

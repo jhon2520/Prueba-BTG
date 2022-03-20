@@ -45,3 +45,9 @@
     display: flex;
 }
 
+.my_app>p{
+    text-align: center;
+    color: rgb(104, 112, 119);
+    margin-bottom: 15px;
+}
+

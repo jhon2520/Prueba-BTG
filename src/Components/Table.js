@@ -23,7 +23,10 @@ export default function Table(props) {
                     {
                         
                         props.fondos.length === 0 ?
-                        <tr><td colSpan="3">No tiene fondos actualmente</td></tr>
+                        <tr>
+                            <img className={styles.img_no_fondos} src="https://cdn-icons-png.flaticon.com/512/4539/4539472.png" alt="" />
+                            <td className={styles.no_fondos} colSpan="2">No tiene fondos actualmente, visitenos en <a target="_blank" rel='noreferrer' href="https://www.btgpactual.com.co/">https://www.btgpactual.com.co/</a>  si tienes dudas. Actualmente cuentas con un saldo de  500.000 COP para vincularte en nuevos fondos </td>
+                        </tr>
                         : props.fondos.map((e)=>{
                             return(
                                 <TableRow

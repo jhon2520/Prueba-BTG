@@ -6,7 +6,7 @@ export default function TableRow(props) {
 
     const handleDeleteData = () =>{
 
-        let borrarData = window.confirm("¿eliminar este registro");
+        let borrarData = window.confirm("¿Desea desvincularse de este fondo?");
         if(borrarData){
 
             props.deleteData(props.id);

@@ -11,13 +11,14 @@
 }
 
 .tabla{
-    background: green;
+    /* background: green; */
     width: 100%;
     height: 80%;
     text-align: center;
     border-collapse: collapse;
     border-radius: 1em;
     overflow: hidden;
+
 }
 
 .tabla>thead>tr{
@@ -25,4 +26,14 @@
     color: #FFF;
     border-bottom: 2px solid #FFF;
     
+}
+
+.img_no_fondos{
+    width: 90px;
+    /* background: red; */
+}
+
+.no_fondos{
+    font-size: 18px;
+
 }
