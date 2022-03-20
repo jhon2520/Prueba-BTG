@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "poppins";
+    padding: 1%;
+}
+.my_app{
+    /* background: red; */
+}
+
+.my_app>img{
+    width: 600px;
+    height: auto;
+}
+
+.my_app>hr{
+    padding: 0;
+    border: 0.01em solid rgb(218, 208, 208) ;
+    padding: 0;
+
+}
+
+.my_app>h2{
+    width: 100%;
+    text-align: center;
+    color: #001E63;
+}
+
+.my_app>h3{
+    width: 100%;
+    text-align: center;
+    color: #001E63;
+    font-size: 16px;
+
+}
+
+.monto{
+    color: teal;
+    font-size: 18px;
+
+}
+.tabla_grafica{
+    margin-top: 40px;
+    /* background-color: red; */
+    display: flex;
+}
+

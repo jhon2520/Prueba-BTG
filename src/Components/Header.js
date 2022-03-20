@@ -1,28 +1,24 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import initialDB from '../Data/InitialData';
-
+import styles from "../CSS/Header.module.css"
 
 
 export default function Header(props) {
 
-
     const [valor, setValor] = useState(undefined);
-    const [montoAMostrar,setMonto] = useState("");
-    const [categoria,setCategoria] = useState("");
-
-
+    
     const handleSubmit = (e)=>{
         e.preventDefault();
-
+        
         // Validar que se haya seleccionado un fondo
         if(!valor){
             alert("Seleccione el fondo que desea vincular");
             return;
         }
-
+        
         let valorFondo = initialDB.find((i)=>i.nombre===valor).monto;
         if(props.capitalInicial >= valorFondo){
-
+            
             // Disiminuir capital
             props.setCapitalInicial(el=>el-valorFondo);
             // Crear nuevo fondo
@@ -37,29 +33,20 @@ export default function Header(props) {
             window.alert("No tiene saldo disponible para hacer esta operación")
             return;
         }
-
-
     }
-
+    
     const handleChance = (e)=>{
-        
         setValor(e.target.value)
-        
-        let valorMonto = initialDB.filter((el)=>el.nombre===valor)[0].monto 
-        setMonto(valorMonto)
-        let valorCat = initialDB.filter((el)=>el.nombre===valor)[0].categoria
-        setCategoria(valorCat)
-        console.log("ValorMONTO",valorMonto,valorCat)
     }
-
+    
 
 
 
 
     return (
-        <div>
+        <div className={styles.header}>
         <form onSubmit={handleSubmit}>
-            <select onChange={handleChance} name="Fondo" defaultValue={"default"} >
+            <select onChange={handleChance} className={styles.seleccion} name="Fondo" defaultValue={"default"} >
             <option value="default" disabled hidden>Seleccione...</option>
                 {
                     initialDB.map((e)=>{
@@ -69,10 +56,10 @@ export default function Header(props) {
                     })
                 }
             </select>
-            <input type="submit" value="Agregar" />
+            <input type="submit" value="Agregar Fondo" />
         </form>
-        {valor ? <h2>Monto mínimo de inversión: {montoAMostrar}</h2> : null}
-        {valor ? <h2>Tipo de fondo {categoria}</h2> : null}
+        {/* {valor ? <h2>Monto mínimo de inversión: {montoAMostrar}</h2> : null}
+        {valor ? <h2>Tipo de fondo {categoria}</h2> : null} */}
         </div>
     )
 }

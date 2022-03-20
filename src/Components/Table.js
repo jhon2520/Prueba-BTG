@@ -1,20 +1,22 @@
 import React from 'react'
 import TableRow from './TableRow'
+import styles from "../CSS/Table.module.css"
 
 export default function Table(props) {
 
     // const montoARetornar = props.fondos.filter((e)=>e.nombre === props.fondo.nombre)
  
     return (
-        <div>
-            <h3>Tus fondos actuales:</h3>
-            <table>
+        <div className={styles.tabla_container}>
+            <h3>Tus Fondos Actuales</h3>
+            <table className={styles.tabla}>
 
                 <thead>
                     <tr>
                         <th>Fondo</th>
-                        <th>Valor vinculación</th>
-                        <th>Tipo de fondo</th>
+                        <th>Valor Vinculación</th>
+                        <th>Tipo De Fondo</th>
+                        <th>Quitar Fondo</th>
                     </tr>
                 </thead>
                 <tbody>

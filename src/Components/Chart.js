@@ -1,37 +1,16 @@
 import React from 'react'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import {Pie} from "react-chartjs-2"
+import styles from "../CSS/Chart.module.css"
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
-const data={
-    labels:["Google","Bing","Baidu","Otros"],
-    datasets:[{
-      data:[74,56,10.54,9.42,5.42],
-      backgroundColor:["#FFFF00","blue","green","#ff0000"]
-    }]
-  };
-  
-  const opciones={
-    resposive:true,
-    maintainAspectRatio:false,
-    // del paquete de labels
-    // pieceLabel:{
-    //   render:function(args){
-    //     return args.Label + ": " +args.value +"%"
-    //   },
-    //   fontSize:15,
-    //   fontColor:"#fff",
-    //   fontFamily:"Arial"
-    // }
-  }
 
 
 export default function ChartApp(props) {
 
     // Sacar fondos unicos
     const fondosUnicos = props.fondos ? props.fondos.map((i)=>i.nombre).filter((value,index,self)=>self.indexOf(value)===index):[]
-    console.log("Fondos unicos",fondosUnicos)
 
     // sumar los montos por nombre
     const baseAgrupada = [];
@@ -48,10 +27,14 @@ export default function ChartApp(props) {
     const valoresSumados = []
     baseAgrupada.forEach((e)=>valoresSumados.push(e.monto))
 
-    console.log("Base agrupada",baseAgrupada);
-    console.log("valores suados",valoresSumados);
+      
+  const opciones={
+    resposive:true,
+    maintainAspectRatio:false,
+  }
 
-    const data2={
+
+    const data={
         labels:fondosUnicos,
         datasets:[{
           data:valoresSumados,
@@ -61,8 +44,8 @@ export default function ChartApp(props) {
 
 
     return (
-        <div>
-            <Pie data={data2} options={opciones}/>
+        <div className={styles.char_container}>
+            <Pie className={styles.char} data={data} options={opciones}/>
         </div>
     )
 }

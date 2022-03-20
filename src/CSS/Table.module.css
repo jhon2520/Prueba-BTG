@@ -1,0 +1,28 @@
+.tabla_container{
+    /* background: yellow; */
+    width: 70%;
+}
+
+.tabla_container>h3{
+    /* background: red; */
+    text-align: center;
+    color: #001E62;
+    font-size: 18px;
+}
+
+.tabla{
+    background: green;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.tabla>thead>tr{
+    background: #21325E;
+    color: #FFF;
+    border-bottom: 2px solid #FFF;
+    
+}

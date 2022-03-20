@@ -1,0 +1,9 @@
+.char_container{
+    background: green;
+    width: 30%;
+    max-width: 50%;
+}
+
+.char{
+    background: purple;
+}

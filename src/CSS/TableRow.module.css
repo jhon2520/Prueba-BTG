@@ -1,0 +1,15 @@
+.table_row:nth-child(even){
+    background: #F4FCD9;
+}
+.table_row:nth-child(odd){
+    background: #B4CFB0;
+}
+
+.btn{
+    background: rgb(173, 9, 9);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #FFF;
+
+}

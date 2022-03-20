@@ -1,0 +1,30 @@
+.header{
+    /* background: green; */
+}
+.header>form{
+    /* background: red; */
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header>form>input{
+    border: none;
+    border-radius: 5px;
+    margin-left: 1%;
+    padding: 1%;
+    background: #001E62;
+    color: #FFF;
+    width: 180px;
+
+}
+
+.seleccion{
+    background:  lightcyan;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 60%;
+}
