@@ -14,28 +14,27 @@ export default function Table(props) {
     return (
         <div className={styles.tabla_container}>
             <h3>Tus Fondos Actuales</h3>
-            <table className={styles.tabla}>
-
-                <thead>
-                    <tr>
-                        <th>Fondo</th>
-                        <th>Valor Vinculación</th>
-                        <th>Tipo De Fondo</th>
-                        <th>Quitar Fondo</th>
-                    </tr>
-                </thead>
+            {
+                props.fondos.length === 0 ?
+                <div className={styles.fila_no_datos}>
+                        
+                        <img src="https://cdn-icons-png.flaticon.com/512/4539/4539472.png" alt="" />
+                        
+                        <p>No tiene fondos actualmente, visitenos en <a target="_blank" rel='noreferrer' href="https://www.btgpactual.com.co/">https://www.btgpactual.com.co/</a>  si tienes dudas. Cuentas con un saldo de  500.000 COP para vincularte en nuevos fondos </p>
+                        
+                </div>
+                    : <table className={styles.tabla}>
+                    <thead>
+                        <tr>
+                            <th>Fondo</th>
+                            <th>Valor Vinculación</th>
+                            <th>Tipo De Fondo</th>
+                            <th>Quitar Fondo</th>
+                        </tr>
+                    </thead>
                 <tbody>
                     {
-                        
-                        props.fondos.length === 0 ?
-                        <tr>
-                            <td>
-                                <img className={styles.img_no_fondos} src="https://cdn-icons-png.flaticon.com/512/4539/4539472.png" alt="" />
-                            </td>
-                            <td className={styles.no_fondos} colSpan="2">No tiene fondos actualmente, visitenos en <a target="_blank" rel='noreferrer' href="https://www.btgpactual.com.co/">https://www.btgpactual.com.co/</a>  si tienes dudas. Actualmente cuentas con un saldo de  500.000 COP para vincularte en nuevos fondos 
-                            </td>
-                        </tr>
-                        : props.fondos.map((e)=>{
+                        props.fondos.map((e)=>{
                             return(
                                 <TableRow
                                     id={e.id}
@@ -52,9 +51,9 @@ export default function Table(props) {
                             )
                         })
                     }
-
                 </tbody>
             </table>
+            }
             <button className={styles.btn_historico} onClick={handleClick}>Ver Histórico</button>
         </div>
     )

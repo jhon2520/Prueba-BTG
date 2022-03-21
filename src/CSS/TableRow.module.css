@@ -1,8 +1,10 @@
 .table_row:nth-child(even){
     background: #F4FCD9;
+    font-size: 1rem;
 }
 .table_row:nth-child(odd){
     background: #B4CFB0;
+    font-size: 1rem;
 }
 
 .btn{
@@ -12,5 +14,28 @@
     padding: 5px;
     color: #FFF;
     margin: 10px;
+    transition: 0.5s;
+    font-size: 1rem;
+
+}
+.btn:hover{
+    background: rgba(185, 90, 0, 0.822);
+    
+}
+
+@media (max-width:500px){
+
+    .table_row:nth-child(even),.table_row:nth-child(odd){
+    
+        font-size: 0.7rem;
+        text-align: center;
+    }
+    .btn{
+        background: rgb(173, 9, 9);
+        padding: 1px;
+        margin: 6px;
+        font-size: 0.6rem;
+    
+    }
 
 }

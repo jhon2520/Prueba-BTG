@@ -1,12 +1,12 @@
 .tabla_container{
 
-    padding: 3%;
+    padding: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    /* height: 120vh;
-*/
+    width: 95%;
+    margin: auto;
 }
 
 .tabla_container>img{
@@ -32,13 +32,18 @@
     background: #21325E;
     color: #FFF;
     border-bottom: 2px solid #FFF;
+    font-size: 0.8rem;
     
 }
 .table_row:nth-child(even){
     background: #e6fcd9;
+    font-size: 0.8rem;
+    overflow:hidden;
 }
 .table_row:nth-child(odd){
     background: #b0cfc5;
+    font-size: 0.8rem;
+    
 }
 
 .btn{
@@ -51,5 +56,41 @@
     margin-top: 35px;
     align-self: flex-start;
     margin-bottom: 60px;
+    transition: 1s;
+}
+.btn:hover{
+    background-color: teal;
+}
+
+@media (max-width:620px) {
+    .tabla{
+        width: 80%;
+    }
+    .table_row:nth-child(even),.table_row:nth-child(odd){
+
+        font-size: 0.6rem;
+        
+    }
+    .tabla>thead>tr{
+    
+        font-size: 0.6rem;
+    }
+
+}
+
+@media (max-width:500px) {
+    .tabla{
+        width: 80%;
+    }
+    .tabla>thead>tr{
+    
+        font-size: 0.5rem;
+    }
+
+    .table_row:nth-child(even),.table_row:nth-child(odd){
+
+        font-size: 0.5rem;
+        
+    }
 
 }

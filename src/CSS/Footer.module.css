@@ -30,7 +30,7 @@
 }
 .hr{
     padding: 0;
-    border: 0.01em solid #FFF;
+    border: 0.01em solid rgba(158, 190, 250, 0.26);
     width: 80%;
 }
 
@@ -41,7 +41,6 @@
     align-items: center;
     justify-content: space-around;
     font-size: 12px;
-    /* background: red; */
     width: 80%;
     font-weight: lighter;
     
@@ -57,4 +56,15 @@
     color: #FFF;
     font-size: 0.8rem;
     height: 20vh;
+}
+.footer_final>p{
+    margin-bottom: 30px;
+}
+
+@media (max-width:500px){
+
+    .grupoh{
+        font-size: 0.5rem;
+    }
+
 }

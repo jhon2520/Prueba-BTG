@@ -40,7 +40,7 @@ export default function InfoPage() {
 
                     <button className={styles.btn} onClick={handleClick}>Volver</button>
                 </article>
-                <img src="https://www.dreamhost.com/blog/wp-content/uploads/2018/09/elements-web-design-opt-750x498.jpg" alt="" />
+                <img className={styles.imagen} src="https://www.dreamhost.com/blog/wp-content/uploads/2018/09/elements-web-design-opt-750x498.jpg" alt="" />
             </section>
         </div>
     )

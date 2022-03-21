@@ -1,6 +1,6 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import styles from "../CSS/HistoricoPage.module.css"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 export default function HistoricoPage() {
 
@@ -11,6 +11,9 @@ export default function HistoricoPage() {
     const handleClick = () =>{
         navigate("/")
     }
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
 
     return (
         <div className={styles.tabla_container}>

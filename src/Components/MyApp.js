@@ -84,7 +84,7 @@ export default function MyApp() {
                 
                 />
             <section className={styles.tabla_grafica}>
-            <Table
+            <Table 
                 fondos={fondos}
                 deleteData={deleteData}
                 capitalInicial={capitalInicial}
@@ -97,7 +97,7 @@ export default function MyApp() {
                 fondos={fondos}
                 />
             </section>
-            
+            <br/><br/>
             <hr/>
         </div>
             <Footer/>

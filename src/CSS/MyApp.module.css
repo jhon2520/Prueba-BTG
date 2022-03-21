@@ -2,30 +2,27 @@
     padding: 0;
     margin: 0;
     font-family: "poppins";
-    /* padding: 1%; */
 }
 .my_app{
-    /* background: red; */
     padding: 2%;
 }
 
 .my_app>img{
-    width: 600px;
+    width: 40%;
     height: auto;
 }
 
 .my_app>hr{
     padding: 0;
-    border: 0.01em solid rgb(218, 208, 208) ;
-    padding: 0;
-
+    border: 0.01em solid rgba(240, 224, 224, 0.897);
 }
 
 .my_app>h2{
     width: 100%;
     text-align: center;
     color: #001E63;
-    margin: 30px
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .my_app>h3{
@@ -33,6 +30,8 @@
     text-align: center;
     color: #001E63;
     font-size: 16px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 
 }
 
@@ -43,8 +42,13 @@
 }
 .tabla_grafica{
     margin-top: 40px;
-    /* background-color: red; */
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
 }
 
 .my_app>p{

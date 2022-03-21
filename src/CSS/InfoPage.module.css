@@ -1,19 +1,19 @@
 .container{
-    /* background: red; */
-    height: 80vh;
     position: relative;
-    padding: 4%;
-    width: 90%;
-    margin: auto;
+    padding: 1%;
+    width: 95%;
+    margin: auto;;
 }
 
 .container>section{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 
 .container>section>article{
-    /* background: green; */
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     height: 80vh;
@@ -21,23 +21,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 6%;
-    width: 60%;
+    gap: 4%;
+    width: 700px;
     background-color: rgba(225, 238, 241, 0.904);
 }
+.imagen{
+    width: 350px;
+    max-width: 30%;
+    height: auto;
+}
+
 .container>section>article>h2{
-    /* background: yellow; */
     color:#21325E;
     width: 60%;
     text-align: center;
-    font-size: 2.9rem;
+    font-size: 2.6rem;
     
 }
 .container>section>article>p{
-    /* background: yellow; */
     width: 90%;
     text-align: justify;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: rgb(111, 121, 131);  
 }
 
@@ -46,7 +50,6 @@
 }
 
 .categoria{
-    /* background: yellow; */
     width: 90%;
     color: rgb(111, 121, 131);
     font-size: 13px;
@@ -66,8 +69,8 @@
 }
 
 .logo{
-    position:absolute;
-    width: 180px;
+    /* position:absolute; */
+    width: 15%;
     
 }
 .capital_disponible{
@@ -87,5 +90,46 @@
     padding: 5px 15px;
     background:#21325E;
     color: #FFF;
+    transition: 1s;
+}
+.btn:hover{
+    background: teal;
+
+}
+
+@media (max-width:1000px){
+
+    .imagen{
+        display: none;
+    }
+}
+
+@media (max-width:500px){
+    .logo{
+        width: 25%;
+    }
+    .container>section>article>h2{
+        font-size: 1.8rem;   
+        width: 85%;
+    }
+    .container>section>article>p{
+        font-size: 0.9rem;
+    }
+    .capital_disponible{
+        font-size: 1rem;
+        width: 70%;
+        text-align: center;
+    }
+    
+    .capital_no_disponible{
+        font-size: 0.8rem;
+        width: 70%;
+        text-align: center;
+    }
+    .categoria{
+
+        width: 100%;
+        text-align: center;
+    }
 
 }

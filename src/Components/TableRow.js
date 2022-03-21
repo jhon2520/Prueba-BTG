@@ -8,7 +8,7 @@ export default function TableRow(props) {
 
     const handleDeleteData = () =>{
 
-        let borrarData = window.confirm("¿Desea desvincularse de este fondo?");
+        let borrarData = window.confirm("¿Desea desvincularse de este fondo? \nEl valor del vinculación será retornado a su capital");
         if(borrarData){
 
         
