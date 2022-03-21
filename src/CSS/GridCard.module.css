@@ -44,8 +44,12 @@
     text-align: center;
     color: azure;
     font-size: 12px;
+    font-weight: 300;
 }
-
+.monto{
+    font-weight: 700;
+    font-size: 13px;
+}
 .enlaces{
     background: teal;
     margin-top: 3%;

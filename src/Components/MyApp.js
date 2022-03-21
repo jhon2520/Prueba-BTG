@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Header from './Header'
 import Table from './Table'
 import Grid from './Grid'
@@ -10,11 +10,24 @@ export default function MyApp() {
 
     const [fondos,setFondos]= useState([])
     const [capitalInicial, setCapitalInicial] = useState(500000)
-    console.log(styles);
 
-    // console.log("Fondos desde la app",fondos);
+    console.log(fondos);
 
-    
+    useEffect(()=>{
+
+        let data = localStorage.getItem("fondos");
+        if(data){
+            setFondos(JSON.parse(data));
+        }
+        else{
+            setFondos("")
+        }
+
+    },[])
+
+    useEffect(()=>{
+        localStorage.setItem("fondos",JSON.stringify(fondos))
+    },[fondos])
     
     const deleteData = (id) =>{
         
@@ -27,6 +40,7 @@ export default function MyApp() {
 
     
     return (
+        <>
         <div className={styles.my_app}>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Btg-logo-blue.svg/1200px-Btg-logo-blue.svg.png" alt="" />
             <Grid/>
@@ -54,7 +68,8 @@ export default function MyApp() {
                 />
             </section>
             <hr/>
-            <Footer/>
         </div>
+            <Footer/>
+            </>
     )
 }

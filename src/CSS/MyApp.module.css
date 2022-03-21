@@ -2,10 +2,11 @@
     padding: 0;
     margin: 0;
     font-family: "poppins";
-    padding: 1%;
+    /* padding: 1%; */
 }
 .my_app{
     /* background: red; */
+    padding: 2%;
 }
 
 .my_app>img{
@@ -24,6 +25,7 @@
     width: 100%;
     text-align: center;
     color: #001E63;
+    margin: 30px
 }
 
 .my_app>h3{
@@ -41,7 +43,7 @@
 }
 .tabla_grafica{
     margin-top: 40px;
-    /* background-color: red; */
+    background-color: red;
     display: flex;
 }
 

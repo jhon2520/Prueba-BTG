@@ -1,6 +1,7 @@
 .tabla_container{
     /* background: yellow; */
     width: 70%;
+    padding: 2%;
 }
 
 .tabla_container>h3{
@@ -8,6 +9,7 @@
     text-align: center;
     color: #001E62;
     font-size: 18px;
+    margin-bottom: 15px;
 }
 
 .tabla{

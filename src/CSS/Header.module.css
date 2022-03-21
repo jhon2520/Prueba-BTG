@@ -1,5 +1,6 @@
 .header{
     /* background: green; */
+    padding: 2%;
 }
 .header>form{
     /* background: red; */
@@ -22,9 +23,13 @@
 }
 
 .seleccion{
-    background:  lightcyan;
+    margin: 15px;
+    background:  rgb(234, 247, 247);
     border: none;
     border-radius: 5px;
     text-align: center;
     width: 60%;
+    padding: 15px;
+    font-size: 16px;
+    border-bottom: 1px solid lightgrey;
 }
