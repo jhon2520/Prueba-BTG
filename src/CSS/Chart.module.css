@@ -1,5 +1,5 @@
 .char_container{
-    /* background: green; */
+
     width: 30%;
     display: flex;
     align-items: center;
@@ -8,7 +8,7 @@
 }
 
 .char{
-    /* background: purple; */
+
     width: 80%;
     height: 75%;
     max-width: 80%;
