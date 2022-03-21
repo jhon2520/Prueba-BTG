@@ -1,9 +1,7 @@
 .header{
-    /* background: green; */
     padding: 2%;
 }
 .header>form{
-    /* background: red; */
     width: 100%;
     padding: 0;
     display: flex;
@@ -15,7 +13,7 @@
     border: none;
     border-radius: 5px;
     margin-left: 1%;
-    padding: 1%;
+    padding: 10px 15px;
     background: #001E62;
     color: #FFF;
     width: 180px;
@@ -29,7 +27,7 @@
     border-radius: 5px;
     text-align: center;
     width: 60%;
-    padding: 15px;
+    padding: 10px 15px;
     font-size: 16px;
     border-bottom: 1px solid lightgrey;
 }

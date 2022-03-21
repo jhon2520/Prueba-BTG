@@ -9,6 +9,7 @@
     box-sizing: border-box;
     margin: 6px;
     border-radius: 10px;
+    position: relative;
 }
 .card>h3{
     font-size: 16px;
@@ -59,4 +60,23 @@
     color: #fff;
     font-size: 10px;
 
+}
+
+.indicador_verde{
+    height: 30px;
+    background: green;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.indicador_rojo{
+    height: 30px;
+    background: red;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }

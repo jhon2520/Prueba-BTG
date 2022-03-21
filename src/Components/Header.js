@@ -28,9 +28,18 @@ export default function Header(props) {
                 monto:initialDB.filter((el)=>el.nombre ===valor)[0].monto,
                 categoria:initialDB.filter((el)=>el.nombre ===valor)[0].categoria
             }])
+
+            props.setHistorico((i)=>[...i,{
+                fecha: `${new Date().toISOString().slice(0,10)}  ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+                id:Date.now(),
+                tipoOperacion:"Vinculación",
+                fondo:valor,
+                monto:initialDB.filter((el)=>el.nombre ===valor)[0].monto,
+                categoria:initialDB.filter((el)=>el.nombre ===valor)[0].categoria,
+            }])
         }
         else{
-            window.alert("No tiene saldo disponible para hacer esta operación")
+            window.alert(`No tiene saldo disponible para vincularse al fondo ${valor}`)
             return;
         }
     }

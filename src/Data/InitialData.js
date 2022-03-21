@@ -3,13 +3,13 @@ const initialDB = [
 
     {
         id:1,
-        nombre:"FPV_BTG_PACTUAL_RECAUDADORA",
+        nombre:"FPV BTG PACTUAL RECAUDADORA",
         monto:75000,
         categoria:"FPV"
     },
     {
         id:2,
-        nombre:"FPV_BTG_PACTUAL_ECOPETROL",
+        nombre:"FPV BTG PACTUAL ECOPETROL",
         monto:125000,
         categoria:"FPV"
     },
@@ -21,13 +21,13 @@ const initialDB = [
     },
     {
         id:4,
-        nombre:"FDO-ACCIONES",
+        nombre:"FDO ACCIONES",
         monto:250000,
         categoria:"FIC"
     },
     {
         id:5,
-        nombre:"FPV_BTG_PACTUAL_DINAMICA",
+        nombre:"FPV BTG PACTUAL DINAMICA",
         monto:100000,
         categoria:"FPV"
     }

@@ -6,28 +6,55 @@ import ChartApp from "./Chart"
 import styles from "../CSS/MyApp.module.css"
 import Footer from './Footer'
 
+const historicoBase = [
+    {
+    fecha:"",
+    id:"",
+    tipoOperacion:"",
+    fondo:"",
+    monto:"",
+    categoria:""}
+    
+]
+
 export default function MyApp() {
 
     const [fondos,setFondos]= useState([])
     const [capitalInicial, setCapitalInicial] = useState(500000)
+    const [historico,setHistorico] = useState("");
 
-    console.log(fondos);
 
     useEffect(()=>{
 
         let data = localStorage.getItem("fondos");
+        let historico = localStorage.getItem("historico");
+        let capital  = localStorage.getItem("capital");
         if(data){
             setFondos(JSON.parse(data));
         }
         else{
             setFondos("")
         }
+        if(historico){
+            setHistorico(JSON.parse(historico));
+        }
+        else{
+            setHistorico("")
+        }
+        if(capital){
+            setCapitalInicial(capital);
+        }
+        else{
+            setCapitalInicial(500000)
+        }
 
     },[])
 
     useEffect(()=>{
         localStorage.setItem("fondos",JSON.stringify(fondos))
-    },[fondos])
+        localStorage.setItem("historico",JSON.stringify(historico))
+        localStorage.setItem("capital",capitalInicial)
+    },[fondos,historico,capitalInicial])
     
     const deleteData = (id) =>{
         
@@ -51,6 +78,7 @@ export default function MyApp() {
             <Header
                 setFondos={setFondos}
                 fondos={fondos}
+                setHistorico={setHistorico}
                 capitalInicial={capitalInicial}
                 setCapitalInicial={setCapitalInicial}
                 
@@ -61,12 +89,15 @@ export default function MyApp() {
                 deleteData={deleteData}
                 capitalInicial={capitalInicial}
                 setCapitalInicial={setCapitalInicial}
+                setHistorico={setHistorico}
+                historico={historico}
                 />
 
             <ChartApp
                 fondos={fondos}
                 />
             </section>
+            
             <hr/>
         </div>
             <Footer/>

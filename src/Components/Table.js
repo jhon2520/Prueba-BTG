@@ -1,11 +1,16 @@
 import React from 'react'
 import TableRow from './TableRow'
 import styles from "../CSS/Table.module.css"
+import { useNavigate } from 'react-router-dom'
 
 export default function Table(props) {
 
-    // const montoARetornar = props.fondos.filter((e)=>e.nombre === props.fondo.nombre)
- 
+    const navegate = useNavigate();
+
+    const handleClick = ()=>{
+        navegate("/fondos/historico")
+    }
+
     return (
         <div className={styles.tabla_container}>
             <h3>Tus Fondos Actuales</h3>
@@ -42,6 +47,7 @@ export default function Table(props) {
                                     fondos={props.fondos}
                                     setCapitalInicial={props.setCapitalInicial}
                                     capitalInicial={props.capitalInicial}
+                                    setHistorico={props.setHistorico}
                                     />
                             )
                         })
@@ -49,7 +55,7 @@ export default function Table(props) {
 
                 </tbody>
             </table>
-            <button>Histórico de operaciones</button>
+            <button className={styles.btn_historico} onClick={handleClick}>Ver Histórico</button>
         </div>
     )
 }

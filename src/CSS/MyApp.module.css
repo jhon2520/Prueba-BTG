@@ -43,7 +43,7 @@
 }
 .tabla_grafica{
     margin-top: 40px;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
 }
 
