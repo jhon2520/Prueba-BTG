@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import styles from "../CSS/HistoricoPage.module.css"
 import { useNavigate} from 'react-router-dom';
+import ReactHtmlTableToExcel from 'react-html-table-to-excel'
 
 export default function HistoricoPage() {
 
@@ -8,18 +9,30 @@ export default function HistoricoPage() {
     const obj = JSON.parse(historico);
     const navigate = useNavigate();
 
+
     const handleClick = () =>{
         navigate("/")
     }
     useEffect(()=>{
         window.scrollTo(0,0)
     },[])
+    
+
+    const deleteHistorico = () =>{
+
+        let confirmar = window.confirm("¿Desea eliminar el histórico? \n Esta operacion no es reversible");
+        if(confirmar){
+            localStorage.setItem("historico","")
+            console.log("Desde la pagina de historico",localStorage.getItem("historico"))
+            navigate("/")
+        }
+    }
 
     return (
-        <div className={styles.tabla_container}>
+            <div className={styles.tabla_container}>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Btg-logo-blue.svg/1200px-Btg-logo-blue.svg.png" alt="" />
             <h2>Histórico De Operaciones</h2>
-        <table className={styles.tabla}>
+        <table id="historico" className={styles.tabla}>
             <thead>
                 <tr>
                     <th>Fondo</th>
@@ -47,7 +60,17 @@ export default function HistoricoPage() {
                 }
             </tbody>
         </table>
+        <div className={styles.exportar} >
         <button onClick={handleClick} className={styles.btn}>Volver</button>
+            <ReactHtmlTableToExcel
+                id="btnExportarExcel"
+                className={`${styles.btn_export} ${styles.btn}`}
+                table="historico"
+                filename="Historico_Operaciones"
+                sheet="Historico"
+                buttonText="Esportar"
+            />
+            </div>
         </div>
     
     )

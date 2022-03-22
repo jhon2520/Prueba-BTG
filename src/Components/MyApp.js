@@ -6,22 +6,12 @@ import ChartApp from "./Chart"
 import styles from "../CSS/MyApp.module.css"
 import Footer from './Footer'
 
-const historicoBase = [
-    {
-    fecha:"",
-    id:"",
-    tipoOperacion:"",
-    fondo:"",
-    monto:"",
-    categoria:""}
-    
-]
-
 export default function MyApp() {
 
     const [fondos,setFondos]= useState([])
     const [capitalInicial, setCapitalInicial] = useState(500000)
     const [historico,setHistorico] = useState("");
+ 
 
 
     useEffect(()=>{

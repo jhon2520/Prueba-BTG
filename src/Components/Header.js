@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import initialDB from '../Data/InitialData';
 import styles from "../CSS/Header.module.css"
 
@@ -6,7 +6,9 @@ import styles from "../CSS/Header.module.css"
 export default function Header(props) {
 
     const [valor, setValor] = useState(undefined);
-    
+
+
+
     const handleSubmit = (e)=>{
         e.preventDefault();
         
@@ -37,6 +39,8 @@ export default function Header(props) {
                 monto:initialDB.filter((el)=>el.nombre ===valor)[0].monto,
                 categoria:initialDB.filter((el)=>el.nombre ===valor)[0].categoria,
             }])
+
+            
         }
         else{
             window.alert(`No tiene saldo disponible para vincularse al fondo ${valor}`)
@@ -67,8 +71,6 @@ export default function Header(props) {
             </select>
             <input type="submit" value="Agregar Fondo" />
         </form>
-        {/* {valor ? <h2>Monto mínimo de inversión: {montoAMostrar}</h2> : null}
-        {valor ? <h2>Tipo de fondo {categoria}</h2> : null} */}
         </div>
     )
 }

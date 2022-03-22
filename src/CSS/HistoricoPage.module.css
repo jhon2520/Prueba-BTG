@@ -62,6 +62,17 @@
     background-color: teal;
 }
 
+.exportar{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.btn_export{
+    background: #016F3E;
+}
+
 @media (max-width:620px) {
     .tabla{
         width: 80%;

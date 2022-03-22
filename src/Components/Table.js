@@ -1,18 +1,23 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import TableRow from './TableRow'
 import styles from "../CSS/Table.module.css"
 import { useNavigate } from 'react-router-dom'
 
+
+
 export default function Table(props) {
 
     const navegate = useNavigate();
-
-    const handleClick = ()=>{
+    
+    const handleClick = (e)=>{
         navegate("/fondos/historico")
     }
 
     return (
         <div className={styles.tabla_container}>
+
+        
+
             <h3>Tus Fondos Actuales</h3>
             {
                 props.fondos.length === 0 ?
