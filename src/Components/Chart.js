@@ -22,7 +22,7 @@ export default function ChartApp(props) {
           baseAgrupada.push(res[value.nombre])
         }
         res[value.nombre].monto += value.monto;
-        return res && "";
+        return res;
       },{})  
       // crear arreglo de loss valores sumados
     }  
