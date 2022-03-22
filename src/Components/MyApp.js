@@ -63,8 +63,8 @@ export default function MyApp() {
             <Grid/>
             <hr/>
             <h2>Mis fondos</h2>
-            <p>A continuación puede vincularse a algunos de nuestros fondos. Seleccione el fondo de su interes y si cuenta con el saldo puede acceder a él.</p>
-            <h3>Tu capital actual es de: <span className={styles.monto}>{capitalInicial.toLocaleString("es-ES",{style:"currency",currency:"COP", minimumFractionDigits:0})}</span></h3>
+            <p>A continuación puede vincularse a algunos de nuestros fondos. Seleccione el fondo de su interés, si cuenta con el saldo puede vincularse.</p>
+            <h3>Capital Actual : <span className={styles.monto}>{capitalInicial.toLocaleString("es-ES",{style:"currency",currency:"COP", minimumFractionDigits:0})}</span></h3>
             <Header
                 setFondos={setFondos}
                 fondos={fondos}

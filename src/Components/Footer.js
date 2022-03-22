@@ -10,9 +10,9 @@ export default function Footer() {
             </section>
             <hr className={styles.hr}/>
             <hgroup className={styles.grupoh}>
-                <h3>Termminos de uso</h3>
+                <h3>Términos de uso</h3>
                 <h3>Protección de datos</h3>
-                <h3>Politica de tarifas</h3>
+                <h3>Política de tarifas</h3>
                 <h3>Atención al consumidor</h3>
             </hgroup>
             <hr className={styles.hr}/>

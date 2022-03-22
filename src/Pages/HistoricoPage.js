@@ -61,7 +61,7 @@ export default function HistoricoPage() {
                 table="historico"
                 filename="Historico_Operaciones"
                 sheet="Historico"
-                buttonText="Esportar"
+                buttonText="Exportar"
             />
             </div>
         </div>

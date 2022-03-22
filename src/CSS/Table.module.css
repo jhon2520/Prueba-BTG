@@ -19,7 +19,10 @@
     max-width: 100%;
     text-align: center;
     border-collapse: collapse;
-    border-radius: 1em;
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
     overflow: hidden;
 
 }
@@ -49,6 +52,8 @@
 .btn_historico:hover{
     background: teal;
 }
+
+
 
 
 /* fila sin datos */

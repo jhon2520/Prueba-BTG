@@ -58,12 +58,17 @@
     height: 20vh;
 }
 .footer_final>p{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-@media (max-width:500px){
+@media (max-width:600px){
 
     .grupoh{
+        font-size: 0.5rem;
+    }
+    .footer_final>p{
+        padding: 10px;
+        text-align: justify;
         font-size: 0.5rem;
     }
 

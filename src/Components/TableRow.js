@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "../CSS/TableRow.module.css"
-import initialDB from '../Data/InitialData';
+
 
 
 export default function TableRow(props) {
@@ -17,7 +17,7 @@ export default function TableRow(props) {
             // sumar el valor del fondo que se eliminar
             let oldData = props.fondos;
             let newData = props.fondos.filter((el)=>el.id !== props.id)
-            let fondoEliminado = oldData.filter(({id:id})=>!newData.some(({id:id2})=>id2 === id))
+            let fondoEliminado = oldData.filter(({id:id1})=>!newData.some(({id:id2})=>id2 === id1))
             let valor = 0;
             newData.forEach(e=>valor+=e.monto)
             props.setCapitalInicial((el)=>500000-valor);
@@ -32,8 +32,7 @@ export default function TableRow(props) {
                 categoria:fondoEliminado[0].categoria,
             }])
             
-            // window.alert(`El valor de vinculación fueron devueltos a su capital`)
-
+    
         }
         else{
             return;
@@ -46,7 +45,7 @@ export default function TableRow(props) {
             <td>{props.nombre}</td>
             <td>{props.monto.toLocaleString("es-ES",{style:"currency",currency:"COP", minimumFractionDigits:0})}</td>
             <td>{props.categoria}</td>
-            <td><button className={styles.btn} onClick={handleDeleteData}>Desvincular Fondo</button></td>
+            <td><button className={styles.btn} onClick={handleDeleteData}>Desvincular</button></td>
         </tr>
         </>
     );
