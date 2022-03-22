@@ -13,19 +13,26 @@ export default function ChartApp(props) {
     const fondosUnicos = props.fondos ? props.fondos.map((i)=>i.nombre).filter((value,index,self)=>self.indexOf(value)===index):[]
 
     // sumar los montos por nombre
-    props.fondos?.reduce(function(res,value){
-      if(!res[value.nombre]){
-        res[value.nombre] = {nombre:value.nombre,monto:0};
-        baseAgrupada.push(res[value.nombre])
-      }
-      res[value.nombre].monto += value.monto;
-      return res && "";
-    },{})
-    const baseAgrupada = [];
+    try{
+      
+      const baseAgrupada = [];
+      props.fondos?.reduce(function(res,value){
+        if(!res[value.nombre]){
+          res[value.nombre] = {nombre:value.nombre,monto:0};
+          baseAgrupada.push(res[value.nombre])
+        }
+        res[value.nombre].monto += value.monto;
+        return res && "";
+      },{})
+      // crear arreglo de loss valores sumados
+      const valoresSumados = []
+      baseAgrupada.forEach((e)=>valoresSumados.push(e.monto))
+    }
+    catch (error)
+    {
+      console.log(error);
+    }
 
-    // crear arreglo de loss valores sumados
-    const valoresSumados = []
-    baseAgrupada.forEach((e)=>valoresSumados.push(e.monto))
 
       
   const opciones={
