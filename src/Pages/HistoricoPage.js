@@ -18,16 +18,6 @@ export default function HistoricoPage() {
     },[])
     
 
-    const deleteHistorico = () =>{
-
-        let confirmar = window.confirm("¿Desea eliminar el histórico? \n Esta operacion no es reversible");
-        if(confirmar){
-            localStorage.setItem("historico","")
-            console.log("Desde la pagina de historico",localStorage.getItem("historico"))
-            navigate("/")
-        }
-    }
-
     return (
             <div className={styles.tabla_container}>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Btg-logo-blue.svg/1200px-Btg-logo-blue.svg.png" alt="" />
