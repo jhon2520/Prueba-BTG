@@ -7,13 +7,27 @@
     margin: auto;
     padding: 2%;
     margin-bottom: 60px;
+    font-family: "poppins";
 
     
     
 }
 
 .selection{
-    background:  rgb(234, 247, 247);
+    /* background:  rgb(234, 247, 247); */
+    color: #fff;
+    text-align: center;
+    text-align-last: center;
+    direction: ltr;
+    background: #152e69;
+    border: none;
+    
+    
+}
+.option{
+    
+    background: #254388;
+    border-bottom: 1px solid #fff;
 }
 
 .container_sup{

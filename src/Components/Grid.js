@@ -28,11 +28,11 @@ export default function Grid() {
             <div className={styles.container_sup}>
                 <h2>Conoce nuestros fondos</h2>
                 
-                <h3>filtrar por categoría</h3>
+                <h3>Filtrar por categoría</h3>
                 <select className={styles.selection} name='filtro' onChange={handleChance}>
-                    <option value="Todos">Todos</option>
-                    <option value="FPV">FPV</option>
-                    <option value="FIC">FIC</option>
+                    <option className={styles.option} value="Todos">FPV - FIC</option>
+                    <option className={styles.option} value="FPV">FPV</option>
+                    <option className={styles.option} value="FIC">FIC</option>
                 </select>
             </div>
             <div className={styles.container_inf}>
